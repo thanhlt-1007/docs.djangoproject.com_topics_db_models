@@ -1,6 +1,6 @@
-from django.db import models
+from django.db.models import Model, CharField
 
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+class Person(Model):
+    first_name = CharField(max_length=30)
+    last_name = CharField(max_length=30)
