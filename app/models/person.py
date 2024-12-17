@@ -12,3 +12,17 @@ class Person(Model):
     birth_date = DateField(default=timezone.now().date())
 
     groups = ManyToManyField(to="app.Group", through="app.Membership")
+
+    def baby_boomer_status(self):
+        from datetime import date
+
+        if self.birth_date < date(1945, 8, 1):
+            return "Pre-boomer"
+        elif self.birth_date > date(1965, 1, 1):
+            return "Baby boomer"
+        else:
+            return "Post-boomer"
+
+    @property
+    def full_name(self):
+        return f"{self.first_nane} {self.last_name}"
