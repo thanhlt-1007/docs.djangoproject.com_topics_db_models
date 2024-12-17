@@ -3,4 +3,4 @@ from app.models import Manufacturer
 
 
 class Car(Model):
-    manufacturer = ForeignKey(to=Manufacturer, on_delete=CASCADE)
+    company_that_makes_it = ForeignKey(to=Manufacturer, on_delete=CASCADE)
