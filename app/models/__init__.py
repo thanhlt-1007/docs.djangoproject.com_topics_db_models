@@ -11,3 +11,4 @@ from .group import Group  # noqa
 from .membership import Membership  # noqa
 from .blog import Blog  # noqa
 from .student import Student  # noqa
+from .place import Place  # noqa
